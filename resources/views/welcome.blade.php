@@ -102,7 +102,7 @@
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-6">
                                 <button type="submit" class="btn btn-default">
-                                    <i class="fa fa-btn fa-plus"></i>問題集を追加
+                                    <i class="fa fa-btn fa-plus"></i>診断する
                                 </button>
                             </div>
                         </div>
