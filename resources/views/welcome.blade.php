@@ -14,6 +14,7 @@
         <style>
             html, body {
                 background-color: #fff;
+                background: url("../img/top_image.jpg") no-repeat center center;
                 color: #636b6f;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
@@ -65,21 +66,62 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                    @endauth
+    <div class="container">
+        <div class="col-sm-offset-2 col-sm-8">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    新しい問題集を追加する
                 </div>
-            @endif
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+                <div class="panel-body">
+                    <!-- Display Validation Errors -->
+
+                    <!-- New Title Form -->
+                    <form action="{{ url('/results')}}" method="POST" class="form-horizontal">
+                        {{ csrf_field() }}
+
+                        <!-- Title Name -->
+                        <div class="form-group">
+                            <label for="title-name" class="col-sm-3 control-label">タイトル</label>
+
+                            <div class="col-sm-6">
+                                <input type="text" name="title" id="title-name" class="form-control" value="{{ old('title') }}">
+                            </div>
+                        </div>
+
+                        <!-- Title Description -->
+                        <div class="form-group">
+                            <label for="title-name" class="col-sm-3 control-label">概要</label>
+
+                            <div class="col-sm-6">
+                                <input type="text" name="detail" id="detail-name" class="form-control" value="{{ old('title') }}">
+                            </div>
+                        </div>
+
+                        <!-- Title Description -->
+                        <div class="form-group">
+                            <label for="title-status" class="col-sm-3 control-label">公開ステータス</label>
+
+                            <div class="col-sm-6">
+                                <select name="status" id="status" class="form-control">
+                                    <option value=1>公開</option>
+                                    <option value=2>非公開</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Add Title Button -->
+                        <div class="form-group">
+                            <div class="col-sm-offset-3 col-sm-6">
+                                <button type="submit" class="btn btn-default">
+                                    <i class="fa fa-btn fa-plus"></i>問題集を追加
+                                </button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
+    </div>
     </body>
 </html>
