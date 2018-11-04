@@ -15,7 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/results', function () {
+Route::post('/result', function () {
+    $res = 1;
+    $type = $res."番バッタータイプです";
     
-    return view('welcome');
+    return view('results', [
+        'type' => $type
+    ]);
 });
