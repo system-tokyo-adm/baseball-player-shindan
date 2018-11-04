@@ -12,6 +12,13 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <style>
+        body{
+            background: url("../img/top_image.jpg") no-repeat center center;
+            background-size: cover;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
