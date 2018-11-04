@@ -12,7 +12,7 @@
                     <!-- Display Validation Errors -->
                     @include('common.errors')
                     <!-- New Title Form -->
-                    <form action="{{ url('/results')}}" method="POST" class="form-horizontal">
+                    <form action="{{ url('results')}}" method="POST" class="form-horizontal">
                         {{ csrf_field() }}
 
                         <!-- Title Name -->
