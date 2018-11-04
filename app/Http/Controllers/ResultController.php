@@ -35,8 +35,30 @@ class ResultController extends Controller
     public function store(Request $request)
     {
 
-         $ave = $request->input('ave');
-         $res = $ave;
+         $ave   = $request->input('ave');
+         $tpa   = $request->input('ave');
+         $bats  = $request->input('bats');
+         $hits  = $request->input('hits');
+         $hr    = $request->input('hr');
+         $rbi   = $request->input('rbi');
+         $score = $request->input('score');
+         $steal = $request->input('steal');
+         $basep = $request->input('basep');
+
+         $m_aves = array(0.301);
+         $m_tpabs = array(3627);
+
+         $m_aves_index = 0;
+         $m_aves_value = 1.2;
+         foreach ($m_aves as $k=>$v) {
+           $diff = abs($v - $ave);
+           if($diff < $m_aves_value){
+               $m_aves_value = $diff;
+               $m_aves_index = $k;
+           }
+         }
+
+         $res = $m_aves_index + 1;
          $type = $res."番バッタータイプです";
 
          return view('results', [

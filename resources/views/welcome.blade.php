@@ -20,7 +20,7 @@
                             <label for="ave-name" class="col-sm-3 control-label">打率</label>
 
                             <div class="col-sm-6">
-                                <input type="number" name="ave" id="ave-name" class="form-control" value="{{ old('ave') }}">
+                                <input type="number" name="ave" id="ave-name" class="form-control" step=0.001 value="{{ old('ave') }}">
                             </div>
                         </div>
 
