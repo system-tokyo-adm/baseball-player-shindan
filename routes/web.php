@@ -11,15 +11,10 @@
 |
 */
 
+
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/result', function () {
-    $res = 1;
-    $type = $res."番バッタータイプです";
-    
-    return view('results', [
-        'type' => $type
-    ]);
-});
+Route::post('/result', 'ResultController@store');
