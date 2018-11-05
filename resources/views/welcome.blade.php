@@ -94,7 +94,7 @@
                             <label for="basep-name" class="col-sm-3 control-label">出塁率</label>
 
                             <div class="col-sm-6">
-                                <input type="number" name="basep" id="basep-name" class="form-control" value="{{ old('basep') }}">
+                                <input type="number" name="basep" id="basep-name" class="form-control" step=0.001 value="{{ old('basep') }}">
                             </div>
                         </div>
 
