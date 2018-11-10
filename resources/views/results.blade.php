@@ -17,7 +17,7 @@
                     </div>
                     <div class="twitter">
 
-                        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="あなたは{{$type}} #野球バッタータイプ診断" data-url="https://baseball-player-shindan.com" data-show-count="false" data-lang="ja">Tweet</a>
+                        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="あなたは{{$type}} #野球選手タイプ診断" data-url="https://baseball-player-shindan.com" data-show-count="false" data-lang="ja">Tweet</a>
                         
                     </div>
                 </div>
