@@ -20,8 +20,9 @@
                         <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="あなたは{{$type}} #野球選手タイプ診断" data-url="https://baseball-player-shindan.com" data-show-count="false" data-lang="ja">Tweet</a>
                         
                     </div>
-                       <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://rcm-fe.amazon-adsystem.com/e/cm?ref=tf_til&t=bps0de-22&m=amazon&o=9&p=8&l=as1&IS1=1&offerlisting=1&asins=B076FVHH19&linkId=b5916c9a5a691d6e13fd99173624fbe0&bc1=ffffff&lt1=_blank&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr">
-    </iframe>
+                    <a href="https://px.a8.net/svt/ejp?a8mat=2ZTUU6+DN6MUQ+2VPC+661TT" target="_blank" rel="nofollow">
+                        <img border="0" width="125" height="125" alt="" src="https://www27.a8.net/svt/bgt?aid=181111902825&wid=001&eno=01&mid=s00000013440001036000&mc=1"></a>
+                        <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=2ZTUU6+DN6MUQ+2VPC+661TT" alt="">
                 </div>
 
             </div>
