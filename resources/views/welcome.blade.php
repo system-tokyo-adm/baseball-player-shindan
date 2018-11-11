@@ -2,7 +2,13 @@
 
 @section('content')
     <div class="container">
-        <div class="col-sm-offset-8 col-sm-4">
+        <div class="col-sm-6">
+        <h1>
+        <font color="darkbrown">打順決めに困ってない？ </br> 成績を入力して打順タイプを診断しよう!</font>
+        </h1>
+        </div>
+        <div class="col-sm-6">
+
             <div class="panel panel-default">
                 <div class="panel-heading">
                     成績を入力する 
@@ -111,6 +117,6 @@
     </iframe>
                 </div>
             </div>
-        </div>
+            </div>
     </div>
 @endsection
