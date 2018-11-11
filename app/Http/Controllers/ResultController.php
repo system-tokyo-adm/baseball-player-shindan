@@ -44,6 +44,37 @@ class ResultController extends Controller
 
     }
 
+    public function fix_hr_number($arr_hrs,$arr_bats,$value_hr,$value_bat){
+
+        $arrs = array(0,0,0,0,0,0,0,0,0);
+
+        // モデルのHR率を計算
+        foreach ($arr_hrs as $k=>$v){
+            if($arr_bats[$k] != 0){
+                $arrs[$k] = $v / $arr_bats[$k];
+            }
+        }
+
+        $value = 0;
+        if($value_bat != 0){
+            $value = $value_hr / $value_bat;
+        }
+
+        $m_aves_index = 0;
+        $m_aves_value = 100000;
+
+        foreach ($arrs as $k=>$v) {
+          $diff = abs($v - $value);
+          if($diff < $m_aves_value){
+              $m_aves_value = $diff;
+              $m_aves_index = $k;
+          }
+        }
+
+        return $m_aves_index;
+
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -103,10 +134,10 @@ class ResultController extends Controller
             $num_deci[$m_hit_index] += 1;
         }
 
-        //HR
+        //HR率を計算
         if(!is_null($hr)){
             $m_hrs    = array(167,72,94,176,202,183,244,96,12);
-            $m_hr_index = $this->fix_top_number($m_hrs,$hr);
+            $m_hr_index = $this->fix_hr_number($m_hrs,$m_bats,$hr,$bats);
             $num_deci[$m_hr_index] += 1;
         }
 
@@ -138,6 +169,8 @@ class ResultController extends Controller
             $num_deci[$m_baseps_index] += 1;
         }
 
+        var_dump($num_deci);
+
         $m_aves_index = 0;
         $m_aves_value = 100000;
 
@@ -151,11 +184,10 @@ class ResultController extends Controller
         }
         $res = $max_index + 1;
         $type = $res."番バッタータイプです";
-
-        
-
+        $hr_type = $m_hr_index + 1 . "番バッタータイプです";
         return view('results', [
-            'type' => $type
+            'type' => $type,
+            'hr_type' => $hr_type
         ]);
     }
 

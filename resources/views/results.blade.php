@@ -5,7 +5,8 @@
         <div class="col-sm-offset-8 col-sm-4">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    あなたは、{{$type}}  
+                    あなたは、{{$type}}  <br>
+                    HRは、{{$hr_type}} 
                 </div>
 
                 <div class="panel-body">
