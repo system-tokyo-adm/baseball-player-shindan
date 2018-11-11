@@ -13,6 +13,8 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
+    <link rel="shortcut icon" href="{{ asset('../img/favicon.ico') }}">
+
     <style>
         body{
             background: url("../img/top_image.jpg") no-repeat center center;
@@ -30,6 +32,7 @@
     </style>
 </head>
 <body>
+    
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
